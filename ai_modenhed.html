@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Modenhed: Fra Hurtige Gevinster til Strategisk Fordel</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+        font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+        color: #333;
+        overflow: hidden;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 10px;
+        border-bottom: 3px solid #FF7F32; /* Changed to orange */
+      }
+      .title {
+        font-size: 36px;
+        font-weight: 800;
+        color: #FF7F32; /* Changed to orange */
+      }
+      .logo {
+        max-height: 50px;
+        width: auto;
+      }
+      .pyramid-container {
+        position: relative;
+        width: 600px;
+        height: 400px;
+        margin: 0 auto;
+      }
+      .pyramid-level {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 800;
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+      .pyramid-level:hover {
+        transform: translateX(-50%) scale(1.05);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+      }
+      .level-1 {
+        bottom: 0;
+        width: 500px;
+        background-color: #FF7F32; /* Changed to orange */
+      }
+      .level-2 {
+        bottom: 120px;
+        width: 400px;
+        background-color: #FF9966; /* Lighter orange */
+      }
+      .level-3 {
+        bottom: 240px;
+        width: 300px;
+        background-color: #0056A4; /* Changed to blue */
+      }
+      .level-description {
+        font-size: 20px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      }
+      .level-title {
+        font-size: 24px;
+        font-weight: 800;
+        color: #FF7F32; /* Changed to orange */
+        margin-bottom: 10px;
+      }
+      .text-sm {
+        font-weight: 800;
+      }
+      .italic {
+        font-weight: 800;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container p-16">
+      <div class="header mb-10">
+        <h1 class="title">AI-Modenhed: Fra Hurtige Gevinster til Strategisk Fordel</h1>
+      </div>
+      
+      <div class="flex">
+        <div class="w-1/2">
+          <div class="pyramid-container">
+            <div class="pyramid-level level-1">
+              <div class="flex items-center">
+                <div class="mr-4 bg-white rounded-full p-2">
+                  <i class="fas fa-play text-orange-600"></i>
+                </div>
+                <div class="text-left">
+                  <p class="text-xl">1. Anvende</p>
+                  <p class="text-sm font-normal">Færdige værktøjer</p>
+                </div>
+              </div>
+            </div>
+            <div class="pyramid-level level-2">
+              <div class="flex items-center">
+                <div class="mr-4 bg-white rounded-full p-2">
+                  <i class="fas fa-sliders-h text-orange-600"></i>
+                </div>
+                <div class="text-left">
+                  <p class="text-xl">2. Tilpasse</p>
+                  <p class="text-sm font-normal">Skræddersy til jeres data</p>
+                </div>
+              </div>
+            </div>
+            <div class="pyramid-level level-3">
+              <div class="flex items-center">
+                <div class="mr-4 bg-white rounded-full p-2">
+                  <i class="fas fa-code text-blue-600"></i>
+                </div>
+                <div class="text-left">
+                  <p class="text-xl">3. Udvikle</p>
+                  <p class="text-sm font-normal">Unikke løsninger</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="w-1/2 flex flex-col justify-center space-y-6">
+          <div class="level-description">
+            <h3 class="level-title">1. Anvende</h3>
+            <p>Brug færdige værktøjer som ChatGPT og Microsoft Copilot til at effektivisere daglige opgaver.</p>
+          </div>
+          
+          <div class="level-description">
+            <h3 class="level-title">2. Tilpasse</h3>
+            <p>Skræddersy AI til jeres data, f.eks. en CustomGPT med jeres produktkatalog eller kundedata.</p>
+          </div>
+          
+          <div class="level-description">
+            <h3 class="level-title">3. Udvikle</h3>
+            <p>Skabe unikke løsninger til jeres kerneforretning med specialiserede AI-værktøjer.</p>
+          </div>
+          
+          <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+            <p class="text-sm italic">Vi starter ved trin 1 og hjælper med at vurdere, hvad der giver mening for jer.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'ArrowLeft') {
+          window.location.href = 'hvad_er_ai.html';
+        } else if (event.key === 'ArrowRight') {
+          window.location.href = 'potentiale.html';
+        }
+      });
+    </script>
+  </body>
+</html>
+

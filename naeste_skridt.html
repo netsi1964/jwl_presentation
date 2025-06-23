@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeres Tovholder i AI-Landskabet</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+        font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+        color: #333;
+        overflow: hidden;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 10px;
+        border-bottom: 3px solid #FF7F32; /* Changed to orange */
+      }
+      .title {
+        font-size: 36px;
+        font-weight: 800;
+        color: #FF7F32; /* Changed to orange */
+      }
+      .logo {
+        max-height: 50px;
+        width: auto;
+      }
+      .content-box {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      }
+      .step-title {
+        font-size: 24px;
+        font-weight: 800;
+        color: #FF7F32; /* Changed to orange */
+      }
+      .icon-container {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+      }
+      .icon-blue {
+        background-color: rgba(255, 127, 50, 0.1); /* Orange tint */
+        color: #FF7F32; /* Orange */
+      }
+      .icon-orange {
+        background-color: rgba(0, 86, 164, 0.1); /* Blue tint */
+        color: #0056A4; /* Blue */
+      }
+      .process-step {
+        position: relative;
+        padding-left: 30px;
+      }
+      .process-step:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 2px;
+        background-color: #FF7F32; /* Changed to orange */
+      }
+      .process-step:first-child:before {
+        top: 50%;
+      }
+      .process-step:last-child:before {
+        height: 50%;
+      }
+      .step-marker {
+        position: absolute;
+        left: -9px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #FF7F32; /* Changed to orange */
+        border: 3px solid white;
+      }
+      .contact-info {
+        background: linear-gradient(135deg, #FF7F32 0%, #FF9966 100%); /* Changed to orange gradient */
+        color: white;
+        border-radius: 10px;
+      }
+      p, li, h3, span {
+        font-weight: 800;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container p-16">
+      <div class="header mb-10">
+        <h1 class="title">Jeres Tovholder i AI-Landskabet</h1>
+      </div>
+      
+      <div class="flex">
+        <div class="w-1/2 pr-8">
+          <div class="content-box p-8 mb-8">
+            <div class="flex items-center mb-6">
+              <div class="icon-container icon-blue mr-6">
+                <i class="fas fa-compass fa-2x"></i>
+              </div>
+              <h2 class="step-title">Vores rolle som tovholder</h2>
+            </div>
+            <ul class="space-y-6">
+              <li class="process-step py-4">
+                <div class="step-marker"></div>
+                <h3 class="font-medium text-xl mb-2">Stille de rigtige spørgsmål</h3>
+                <p>Vi hjælper jer med at identificere, hvor AI kan skabe mest værdi i jeres organisation.</p>
+              </li>
+              <li class="process-step py-4">
+                <div class="step-marker"></div>
+                <h3 class="font-medium text-xl mb-2">Finde de rigtige løsninger</h3>
+                <p>Vi guider jer til de værktøjer og tilgange, der passer bedst til jeres behov og modenhed.</p>
+              </li>
+              <li class="process-step py-4">
+                <div class="step-marker"></div>
+                <h3 class="font-medium text-xl mb-2">Sikre succesfuld implementering</h3>
+                <p>Vi følger op og sikrer, at løsningerne skaber reel værdi i hverdagen.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="w-1/2">
+          <div class="content-box p-8 mb-8">
+            <div class="flex items-center mb-6">
+              <div class="icon-container icon-orange mr-6">
+                <i class="fas fa-tasks fa-2x"></i>
+              </div>
+              <h2 class="step-title">Næste skridt</h2>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg mb-6">
+              <h3 class="font-medium text-xl mb-3">Afklarende workshop</h3>
+              <ul class="list-disc pl-6 space-y-2">
+                <li>Fokus på ét specifikt område i jeres virksomhed</li>
+                <li>Identificering af konkrete "lavthængende frugter"</li>
+                <li>Udarbejdelse af handlingsplan med klare næste skridt</li>
+                <li>Involvering af nøglemedarbejdere fra starten</li>
+              </ul>
+            </div>
+            <p class="text-center italic">Lad os tage en åben dialog om jeres tanker og behov</p>
+          </div>
+          
+          <div class="contact-info p-6">
+            <div class="flex items-center">
+              <div>
+                <h3 class="text-xl font-medium mb-1">Sten Hougaard</h3>
+                <p class="mb-1">AI ekspert</p>
+                <div class="flex items-center mt-2">
+                  <i class="fas fa-phone-alt mr-2"></i>
+                  <span>405 405 27</span>
+                </div>
+                <div class="flex items-center mt-1">
+                  <i class="fas fa-envelope mr-2"></i>
+                  <span>netsi1964@gmail.com</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'ArrowLeft') {
+          window.location.href = 'mennesker.html';
+        }
+      });
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hvor kan AI skabe værdi i jeres hverdag?</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+        font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+        color: #333;
+        overflow: hidden;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 10px;
+        border-bottom: 3px solid #FF7F32; /* Changed to orange */
+      }
+      .title {
+        font-size: 36px;
+        font-weight: 800;
+        color: #FF7F32; /* Changed to orange */
+      }
+      .logo {
+        max-height: 50px;
+        width: auto;
+      }
+      .department-card {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+      }
+      .department-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+      }
+      .department-title {
+        font-size: 24px;
+        font-weight: 800;
+        color: #FF7F32; /* Changed to orange */
+      }
+      .icon-container {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+      }
+      .icon-blue {
+        background-color: rgba(255, 127, 50, 0.1); /* Orange tint */
+        color: #FF7F32; /* Orange */
+      }
+      .icon-orange {
+        background-color: rgba(0, 86, 164, 0.1); /* Blue tint */
+        color: #0056A4; /* Blue */
+      }
+      .highlight-box {
+        background-color: #FF7F32;
+        color: white;
+        border-radius: 10px;
+      }
+      .subtitle {
+        font-weight: 800;
+      }
+      p {
+        font-weight: 800;
+      }
+      li {
+        font-weight: 800;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container p-16">
+      <div class="header mb-10">
+        <h1 class="title">Hvor kan AI skabe værdi i jeres hverdag?</h1>
+      </div>
+      
+      <div class="subtitle text-xl text-center mb-8 font-medium text-gray-700">
+        Med fokus på hurtige gevinster og medarbejderinddragelse
+      </div>
+      
+      <div class="grid grid-cols-2 gap-6">
+        <div class="department-card p-6">
+          <div class="flex items-center mb-4">
+            <div class="icon-container icon-blue mr-4">
+              <i class="fas fa-cogs fa-2x"></i>
+            </div>
+            <h2 class="department-title">Produktion</h2>
+          </div>
+          <p class="mb-3">Automatisering af dokumenthåndtering:</p>
+          <ul class="list-disc pl-6 text-gray-700">
+            <li>Hurtig opsummering af certifikater</li>
+            <li>Udtræk af nøgledata fra produktionsrapporter</li>
+          </ul>
+        </div>
+        
+        <div class="department-card p-6">
+          <div class="flex items-center mb-4">
+            <div class="icon-container icon-orange mr-4">
+              <i class="fas fa-chart-line fa-2x"></i>
+            </div>
+            <h2 class="department-title">Salg</h2>
+          </div>
+          <p class="mb-3">Effektivisering af salgsmateriale:</p>
+          <ul class="list-disc pl-6 text-gray-700">
+            <li>Automatisk udkast til tilbud</li>
+            <li>Produktbeskrivelser baseret på eksisterende skabeloner</li>
+          </ul>
+        </div>
+        
+        <div class="department-card p-6">
+          <div class="flex items-center mb-4">
+            <div class="icon-container icon-blue mr-4">
+              <i class="fas fa-file-invoice-dollar fa-2x"></i>
+            </div>
+            <h2 class="department-title">Økonomi/Admin</h2>
+          </div>
+          <p class="mb-3">Strømlining af administrative opgaver:</p>
+          <ul class="list-disc pl-6 text-gray-700">
+            <li>LLM-assisteret kategorisering af udgifter</li>
+            <li>Udtræk af information fra fakturaer</li>
+          </ul>
+        </div>
+        
+        <div class="department-card p-6">
+          <div class="flex items-center mb-4">
+            <div class="icon-container icon-orange mr-4">
+              <i class="fas fa-bullhorn fa-2x"></i>
+            </div>
+            <h2 class="department-title">Marketing</h2>
+          </div>
+          <p class="mb-3">Indholdsgenerering og analyse:</p>
+          <ul class="list-disc pl-6 text-gray-700">
+            <li>Udkast til opslag på sociale medier</li>
+            <li>Opsummering af markedsanalyser</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="highlight-box p-6 mt-8">
+        <div class="flex items-center">
+          <div class="icon-container bg-white mr-6" style="min-width: 60px;">
+            <i class="fas fa-users fa-2x text-orange-500"></i>
+          </div>
+          <div>
+            <h2 class="text-2xl font-medium mb-2">Medarbejderinddragelse</h2>
+            <p>Identificer de bedste "lavthængende frugter" ved at spørge medarbejderne: <span class="font-medium">Hvilke gentagne, tidskrævende opgaver kunne en AI-assistent hjælpe med at automatisere i jeres dagligdag?</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'ArrowLeft') {
+          window.location.href = 'ai_modenhed.html';
+        } else if (event.key === 'ArrowRight') {
+          window.location.href = 'mennesker.html';
+        }
+      });
+    </script>
+  </body>
+</html>
+
