@@ -7,81 +7,25 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-      .slide-container {
-        width: 1280px;
-        min-height: 720px;
-        background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
-        font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
-        color: #333;
-        overflow: hidden;
-      }
-      .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-bottom: 10px;
-        border-bottom: 3px solid #FF7F32; /* Changed to orange */
-      }
-      .title {
-        font-size: 36px;
-        font-weight: 800;
-        color: #FF7F32; /* Changed to orange */
-      }
-      .logo {
-        max-height: 50px;
-        width: auto;
-      }
-      .content-box {
-        background-color: white;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-      }
-      .key-point {
-        font-size: 24px;
-        font-weight: 800;
-        color: #FF7F32; /* Changed to orange */
-      }
-      .icon-container {
-        width: 80px;
-        height: 80px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-      }
-      .icon-blue {
-        background-color: rgba(255, 127, 50, 0.1); /* Orange tint */
-        color: #FF7F32; /* Orange */
-      }
-      .icon-orange {
-        background-color: rgba(0, 86, 164, 0.1); /* Blue tint */
-        color: #0056A4; /* Blue */
-      }
-      .chart-container {
-        height: 300px;
-        width: 100%;
-      }
-      p, li, h3 {
-        font-weight: 800;
-      }
-    </style>
   </head>
   <body>
     <div class="slide-container p-16">
       <div class="header mb-10">
         <h1 class="title">AI som Medspiller, ikke Modspiller</h1>
+        <div class="pages text-m">slide 4 af 5</div>
       </div>
       
       <div class="flex">
         <div class="w-1/2 pr-8">
           <div class="content-box p-8 mb-8">
             <div class="flex items-center mb-6">
-              <div class="icon-container icon-blue mr-6">
-                <i class="fas fa-users fa-2x"></i>
+              <div class="icon-container icon-container-large mr-6">
+                <!-- <i class="fas fa-users fa-2x"></i> -->
+                <img src="images/medarbejderinddragelse.png" alt="Medarbejderinddragelse">
               </div>
-              <h2 class="key-point">Succesfuld implementering starter med medarbejderne</h2>
+              <h2 class="key-point text-xl">Succesfuld implementering starter med medarbejderne</h2>
             </div>
             <ul class="space-y-4 text-lg">
               <li class="flex items-start">
@@ -97,10 +41,6 @@
                 <span>Fokuser på at fjerne frygt og skabe nysgerrighed</span>
               </li>
             </ul>
-          </div>
-          
-          <div class="content-box p-6 bg-blue-50 border-l-4 border-blue-500">
-            <p class="italic">"AI handler ikke om at erstatte mennesker, men om at give dem bedre værktøjer til at løse deres opgaver."</p>
           </div>
         </div>
         
@@ -119,6 +59,17 @@
               <div>
                 <h3 class="text-xl font-medium text-orange-600 mb-2">Husk:</h3>
                 <p>AI er et værktøj, der skal frigøre menneskers potentiale - ikke erstatte det.</p>
+              </div>
+            </div>
+          </div>
+          <div class="content-box p-6 bg-orange-50 mt-6">
+            <div class="flex items-center">
+              <div class="icon-container icon-orange mr-4">
+                <i class="fas fa-lightbulb fa-2x"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-medium text-orange-600 mb-2">Husk:</h3>
+                  <p>AI er Jeres nye medarbejder, hjælp den med at hjælpe Jer.</p>
               </div>
             </div>
           </div>

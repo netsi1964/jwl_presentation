@@ -8,93 +8,23 @@
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-      .slide-container {
-        width: 1280px;
-        min-height: 720px;
-        background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
-        font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
-        color: #333;
-        overflow: hidden;
-      }
-      .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-bottom: 10px;
-        border-bottom: 3px solid #FF7F32; /* Changed to orange */
-      }
-      .title {
-        font-size: 36px;
-        font-weight: 800;
-        color: #FF7F32; /* Changed to orange */
-      }
-      .logo {
-        max-height: 50px;
-        width: auto;
-      }
-      .content-box {
-        background-color: white;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-      }
-      .step-title {
-        font-size: 24px;
-        font-weight: 800;
-        color: #FF7F32; /* Changed to orange */
-      }
-      .step-description {
-        font-size: 20px;
-        color: #555;
-        font-weight: 800;
-      }
-      .icon-container {
-        width: 80px;
-        height: 80px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-      }
-      .icon-blue {
-        background-color: rgba(255, 127, 50, 0.1); /* Orange tint */
-        color: #FF7F32; /* Orange */
-      }
-      .icon-orange {
-        background-color: rgba(0, 86, 164, 0.1); /* Blue tint */
-        color: #0056A4; /* Blue */
-      }
-      .arrow-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .arrow {
-        color: #FF7F32; /* Changed to orange */
-        font-size: 24px;
-      }
-      .font-medium {
-        font-weight: 800;
-      }
-      .text-sm {
-        font-weight: 800;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <div class="slide-container p-16">
       <div class="header mb-10">
         <h1 class="title">Hvad er AI i Praksis for Jer?</h1>
+        <div class="pages text-m">første slide af 5</div>
       </div>
       
       <div class="flex flex-col space-y-8">
         <div class="content-box p-6">
           <div class="flex items-center">
-            <div class="icon-container icon-blue mr-6">
-              <img src="/jwl_presentation/VDGmUxdJxDBp.png" alt="Microsoft Copilot" style="width: 60px; height: 60px;">
+            <div class="icon-container icon-container-large mr-6">
+              <img src="images/robot-doing-tasks.png" alt="Microsoft Copilot" >
             </div>
             <div>
-              <h2 class="step-title mb-2">I kender allerede assistenter</h2>
+              <h2 class="step-title mb-2">I kender måske allerede assistenter</h2>
               <p class="step-description">Microsoft Copilot til mails, tekst og simple opgaver</p>
             </div>
           </div>
@@ -106,8 +36,8 @@
         
         <div class="content-box p-6">
           <div class="flex items-center">
-            <div class="icon-container icon-orange mr-6">
-              <img src="/jwl_presentation/fyRlnDnrD3HL.png" alt="Data Analysis" style="width: 60px; height: 60px;">
+            <div class="icon-container icon-container-large  mr-6">
+              <img src="images/ai-can-help-with-more.png" alt="Data Analysis">
             </div>
             <div>
               <h2 class="step-title mb-2">Tænk videre: AI kan mere</h2>
@@ -117,28 +47,31 @@
         </div>
         
         <div class="content-box p-6 bg-gray-50">
-          <h2 class="step-title mb-4 text-center">Begreber i én sætning:</h2>
+          <h2 class="step-title mb-4 text-center">Nogle begreber:</h2>
           <div class="flex justify-around">
             <div class="text-center px-4">
-              <div class="icon-container icon-blue mx-auto mb-3">
-                <i class="fas fa-microchip fa-2x"></i>
+              <div class="icon-container icon-container-large mx-auto mb-3">
+                <!-- <i class="fas fa-microchip fa-2x"></i> -->
+                <img src="images/ChatGPT-Gemini-GROK.png" alt="LLM Motor">
               </div>
-              <p class="font-medium">LLM</p>
-              <p class="text-sm text-gray-600">Motor</p>
+              <p class="font-medium text-xl">LLM</p>
+              <p class="text-2xl text-gray-600">Motor</p>
             </div>
             <div class="text-center px-4">
-              <div class="icon-container icon-orange mx-auto mb-3">
-                <i class="fas fa-comments fa-2x"></i>
+              <div class="icon-container icon-container-large mx-auto mb-3">
+                <!-- <i class="fas fa-comments fa-2x"></i> -->
+                <img src="images/chatbot-ui.png" alt="Chatbog brugerflade">
               </div>
-              <p class="font-medium">Chatbot</p>
-              <p class="text-sm text-gray-600">Brugerflade</p>
+              <p class="font-medium text-xl">Chatbot</p>
+              <p class="text-2xl text-gray-600">Brugerflade</p>
             </div>
             <div class="text-center px-4">
-              <div class="icon-container icon-blue mx-auto mb-3">
-                <i class="fas fa-robot fa-2x"></i>
+              <div class="icon-container icon-container-large mx-auto mb-3">
+                <!-- <i class="fas fa-robot fa-2x"></i> -->
+                <img src="images/ai-agent.png" alt="AI-Agent">
               </div>
-              <p class="font-medium">AI-agent</p>
-              <p class="text-sm text-gray-600">Opgaveløser</p>
+              <p class="font-medium text-xl">AI-agent</p>
+              <p class="text-2xl text-gray-600">Opgaveløser</p>
             </div>
           </div>
         </div>

@@ -1,0 +1,205 @@
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+}
+.slide-container {
+    width: 100%;
+    aspect-ratio: 16/9;
+    max-height: 100vh;
+    font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+    color: #333;
+    overflow: hidden;
+    position: relative;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #FF7F32;
+  }
+  .title {
+    font-size: 36px;
+    font-weight: 800;
+    color: #FF7F32;
+    line-height: 1.2;
+  }
+  .subtitle {
+    font-size: 36px;
+    font-weight: 800;
+    color: #0056A4;
+  }
+  .logo {
+    max-height: 50px;
+    width: auto;
+  }
+  .content-box, .department-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  .department-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  .department-title, .step-title {
+    font-size: 24px;
+    font-weight: 800;
+    color: #FF7F32;
+  }
+  .arrow-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .arrow {
+    color: #FF7F32;
+    font-size: 24px;
+  }
+  .icon-container {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  .icon-container-large {
+    width: auto;
+    height: 240px;
+  }
+  .icon-container-large img {
+    height: 240px;
+  }
+  .icon-blue {
+    background-color: rgba(255, 127, 50, 0.1);
+    color: #FF7F32;
+  }
+  .icon-orange {
+    background-color: rgba(0, 86, 164, 0.1);
+    color: #0056A4;
+  }
+  .pyramid-container {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+  }
+  .pyramid-level {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 800;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  .pyramid-level:hover {
+    transform: translateX(-50%) scale(1.05);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  .level-1 {
+    bottom: 0;
+    width: 500px;
+    background-color: #FF7F32;
+  }
+  .level-2 {
+    bottom: 120px;
+    width: 400px;
+    background-color: #FF9966;
+  }
+  .level-3 {
+    bottom: 240px;
+    width: 300px;
+    background-color: #0056A4;
+  }
+  .level-description {
+    font-size: 24px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
+  .level-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: #FF7F32;
+    margin-bottom: 10px;
+  }
+  .text-sm {
+    font-size: 18px;
+    font-weight: 800;
+  }
+  .text-m {
+    font-size: 20px !important;
+  }
+  .text-xl {
+    font-size: 24px !important;
+  }
+  .text-2xl {
+    font-size: 30px !important;
+    font-weight: 800;
+  }
+  .italic {
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 800;
+  }
+  p, li, h3, span {
+    font-weight: 800;
+  }
+  p {
+    font-size: 22px;
+  }
+  .highlight-box {
+    background-color: #FF7F32;
+    color: white;
+    border-radius: 10px;
+  }
+  .accent-line {
+    height: 6px;
+    background: linear-gradient(90deg, #FF7F32, #0056A4);
+    width: 200px;
+    margin: 20px 0;
+  }
+  .process-step {
+    position: relative;
+    padding-left: 30px;
+  }
+  .process-step:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background-color: #FF7F32;
+  }
+  .process-step:first-child:before {
+    top: 50%;
+  }
+  .process-step:last-child:before {
+    height: 50%;
+  }
+  .step-marker {
+    position: absolute;
+    left: -9px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #FF7F32;
+    border: 3px solid white;
+  }
+  .contact-info {
+    background: linear-gradient(135deg, #FF7F32 0%, #FF9966 100%);
+    color: black;
+    font-weight: 100;
+    border-radius: 10px;
+  }
