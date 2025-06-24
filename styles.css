@@ -2,9 +2,9 @@ body {
     background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
 }
 .slide-container {
-    width: 100%;
+    max-width: 100%;
     aspect-ratio: 16/9;
-    max-height: 100vh;
+    height: 100vh;
     font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
     color: #333;
     overflow: hidden;
@@ -66,10 +66,10 @@ body {
   }
   .icon-container-large {
     width: auto;
-    height: 240px;
+    height: 200px;
   }
   .icon-container-large img {
-    height: 240px;
+    height: 200px;
   }
   .icon-blue {
     background-color: rgba(255, 127, 50, 0.1);
